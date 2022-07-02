@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+:root{
+    /* hue:219; */
+    --hue: 245;
+    --primary-color: hsl(var(--hue), 69%, 20%);
+    font-size: 62.5%;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+ul,p{
+    font-size: 1.6rem;
+}
+section img{
+    display: block;
+    width: 100%;
+}
+#header-main{
+    background-color: var(--primary-color);
+    padding: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+#header-main .menu,
+#header-main h2{
+    flex: 1;
+    margin-inline: 5rem;
+    font-size: 3rem;
+}
+#header-main .menu{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+#header-main .menu li{
+    transition: 300ms;
+    margin-right: 15%;
+}
+#header-main .menu li:hover{
+    opacity: 1;
+}
+#header-main .menu li,
+#header-main .menu li:active{
+    opacity: 0.6;
+}
+#header-main .menu a{
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.menu li a::after{
+    content: '';
+    width: 0%;
+    height: .2rem;
+    background-color: white;
+    
+    position: relative;
+    bottom: -1.8rem;
+    left: -1rem;
+
+    display: block;
+    transition: width 300ms;
+}
+.menu li a:hover::after{
+    width: 100%;
+    padding-inline: 1rem;
+    text-align: center;
+}
+
+section#about,
+section#title{
+    display: flex;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+section#title > div{
+    flex: 1;
+}
+.div-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+.div-text div{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.div-text > div h1{
+    font-size: 4.8rem;
+    color: var(--primary-color);
+}
+.div-text > div h2{
+    color: var(--primary-color);
+    border-left: 5px solid var(--primary-color);
+    padding-left: .5rem;
+    font-size: 2.8rem;
+}
+
+.button{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    transition: 300ms;
+    font-size: 1.6rem;
+}
+.button:hover{
+    opacity: 0.7;
+}
+.button:active{
+    opacity: 1;
+}
+
+.div-text-2{
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.div-text-2 h2{
+    font-size: 3.5rem;
+    margin-left: 5%;
+}
+section#about{
+    margin-bottom: 4rem;
+}
+section#about img{
+    max-width: 52rem;
+}
+section#about .div-text div{
+    width: 80%;
+}
+section#about p{
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
+section#services{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.div-flex{
+    margin-left: 5%;
+    display: flex;
+    padding: 2rem;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    
+}
+#products{
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#products li{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+#products li>p{
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+#products a.bt-service{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+#plans{
+    align-items: flex-end;
+    width: 80%;
+}
+.plan{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 5px solid var(--primary-color);
+    align-items: center;
+    margin-right: 5%;
+}
+.plan :not(a){
+    flex: 1;
+    padding: 1rem;
+}
+.plan h3{
+    width: 70%;
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 2rem;
+}
+.plan a{
+    margin-block: 2rem;
+}
+.plan ul{
+    list-style-position: inside;
+    text-align: start;
+    width: 100%;
+}
+.plan ul li{
+    display: flex;
+    align-items: center;
+}
+.plan ul li::before{
+    content: "";
+    width: .8rem;
+    height: .8rem;
+    background-color: var(--primary-color);
+    margin-right: 2rem;
+}
+footer{
+    padding: 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50%;
+    height: 3rem;
+}
+footer p{
+    flex: 1;
+}
+
+@media screen and (max-width: 992px) {
+    
+    section#title > .div-text div{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    section#title .div-right{
+        display: none;
+    }
+
+    section#about{
+        flex-direction: column;
+    }
+
+    #products{
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        flex-direction: column;
+    }
+
+    #plans{
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        flex-direction: column;
+    }
+    #plans .plan{
+        width: 50%;
+    }
+}
